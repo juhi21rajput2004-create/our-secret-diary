@@ -1,0 +1,1098 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Cormorant+Garamond:wght@600&family=Poppins:wght@300;400&display=swap');
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+
+body{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+font-family:'Poppins',sans-serif;
+
+
+background:
+
+linear-gradient(
+rgba(20,10,5,.85),
+rgba(20,10,5,.85)
+),
+
+url("https://images.unsplash.com/photo-1512820790803-83ca734da794");
+
+background-size:cover;
+background-position:center;
+
+}
+
+
+
+/* BACK BUTTON */
+
+
+.back{
+
+position:absolute;
+
+top:25px;
+left:30px;
+
+
+background:#5a321d;
+
+color:#ffe9c8;
+
+padding:10px 25px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+font-size:15px;
+
+border:1px solid #c79b65;
+
+z-index:10;
+
+
+transition:.3s;
+
+}
+
+
+.back:hover{
+
+background:#8b572a;
+
+transform:translateY(-3px);
+
+}
+
+
+
+/* BOOK AREA */
+
+
+.book-area{
+
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+
+perspective:2000px;
+
+
+}
+
+
+
+/* BOOK SIZE */
+
+
+#book{
+
+
+width:620px;
+
+height:430px;
+
+
+}
+
+
+
+/* ALL PAGES */
+
+
+.page{
+
+
+background:
+
+linear-gradient(
+135deg,
+#f8e8c8,
+#e8c99b
+);
+
+
+position:relative;
+
+overflow:hidden;
+
+
+box-shadow:
+
+inset 0 0 40px rgba(80,40,10,.25),
+
+0 15px 40px rgba(0,0,0,.5);
+
+
+}
+
+
+
+/* PAPER OLD EFFECT */
+
+
+.page:before{
+
+
+content:"";
+
+
+position:absolute;
+
+inset:0;
+
+
+background:
+
+
+radial-gradient(
+rgba(120,70,20,.15) 1px,
+transparent 1px
+);
+
+
+background-size:10px 10px;
+
+
+opacity:.5;
+
+
+}
+
+
+
+/* ===================
+COVER
+=================== */
+
+
+.cover{
+
+
+background:
+
+linear-gradient(
+145deg,
+#24130b,
+#4a2412,
+#6b3518,
+#301509
+);
+
+
+color:#f5d8a5;
+
+
+}
+
+
+
+.cover:after{
+
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+
+background:
+
+repeating-linear-gradient(
+45deg,
+rgba(255,255,255,.03),
+rgba(255,255,255,.03) 2px,
+transparent 2px,
+transparent 6px
+);
+
+
+}
+
+
+
+
+.cover-inner{
+
+
+height:100%;
+
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+
+text-align:center;
+
+
+position:relative;
+
+z-index:2;
+
+
+padding:30px;
+
+
+}
+
+
+
+.cover h1{
+
+
+font-family:'Cinzel',serif;
+
+
+font-size:42px;
+
+
+letter-spacing:3px;
+
+
+color:#ffe4b5;
+
+
+}
+
+
+
+.cover h2{
+
+
+font-family:'Cormorant Garamond',serif;
+
+
+font-size:38px;
+
+
+margin-top:10px;
+
+
+color:#f4c98b;
+
+
+}
+
+
+
+.cover p{
+
+
+margin-top:20px;
+
+
+font-size:18px;
+
+
+line-height:1.8;
+
+
+color:#ffe8c9;
+
+
+}
+
+
+.cover span{
+
+
+font-size:14px;
+
+color:#d9a76a;
+
+}
+
+
+
+.line{
+
+
+width:150px;
+
+height:2px;
+
+
+background:#c48a45;
+
+
+margin:20px;
+
+}
+
+
+
+
+
+/* WAX SEAL */
+
+
+.seal{
+
+
+height:65px;
+
+width:65px;
+
+
+background:#7b1018;
+
+
+border-radius:50%;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+font-size:30px;
+
+
+box-shadow:
+
+0 5px 15px black,
+
+inset 0 0 15px white;
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+
+/* REASON PAGE */
+
+
+.reason-page{
+
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+
+text-align:center;
+
+
+padding:50px;
+
+
+}
+
+
+
+
+.reason-page h2{
+
+
+font-family:'Cinzel',serif;
+
+
+font-size:50px;
+
+
+color:#6b3518;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.reason-page p{
+
+
+font-family:'Cormorant Garamond',serif;
+
+
+font-size:25px;
+
+
+line-height:1.7;
+
+
+color:#4b2a18;
+
+
+}
+
+
+
+
+.ribbon{
+
+
+position:absolute;
+
+right:25px;
+
+top:0;
+
+
+height:120px;
+
+width:14px;
+
+
+background:#7b1018;
+
+
+}
+
+
+
+
+
+.page-number{
+
+
+position:absolute;
+
+
+bottom:15px;
+
+right:20px;
+
+
+font-size:14px;
+
+
+color:#805331;
+
+
+}
+
+
+
+
+
+/* END PAGE */
+
+
+.ending{
+
+
+background:#f5dfb6;
+
+
+}
+
+
+
+.ending-inner{
+
+
+height:100%;
+
+
+display:flex;
+
+flex-direction:column;
+
+
+justify-content:center;
+
+align-items:center;
+
+
+text-align:center;
+
+
+padding:40px;
+
+
+}
+
+
+
+.ending h1{
+
+
+font-family:'Cinzel',serif;
+
+
+font-size:45px;
+
+
+color:#653415;
+
+
+}
+
+
+
+.ending p{
+
+
+font-family:'Cormorant Garamond',serif;
+
+
+font-size:25px;
+
+
+color:#54301b;
+
+
+line-height:1.8;
+
+
+}
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+
+#book{
+
+width:90vw;
+
+height:60vh;
+
+}
+
+
+.cover h1{
+
+font-size:30px;
+
+}
+
+
+.cover h2{
+
+font-size:28px;
+
+}
+
+
+
+.reason-page p{
+
+font-size:18px;
+
+}
+
+
+}
+
+
+/* ==========================
+   MUSIC BUTTON
+========================== */
+
+
+#musicBtn{
+
+position:absolute;
+
+right:25px;
+
+top:25px;
+
+z-index:999;
+
+
+background:
+linear-gradient(
+135deg,
+#8b572a,
+#3b1c0d
+);
+
+
+color:#ffe6b0;
+
+
+border:1px solid #d7a45c;
+
+
+padding:12px 25px;
+
+
+border-radius:40px;
+
+
+cursor:pointer;
+
+
+font-size:14px;
+
+
+box-shadow:
+0 5px 20px rgba(0,0,0,.6);
+
+
+transition:.3s;
+
+}
+
+
+
+#musicBtn:hover{
+
+transform:scale(1.08);
+
+}
+
+
+
+/* ==========================
+ HEART EFFECT
+========================== */
+
+
+.hearts span{
+
+position:absolute;
+
+color:#ff6f91;
+
+font-size:20px;
+
+animation:heartFall 8s linear infinite;
+
+z-index:5;
+
+}
+
+
+
+@keyframes heartFall{
+
+
+0%{
+
+transform:
+translateY(-100px)
+rotate(0deg);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:
+translateY(100vh)
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+
+
+/* ==========================
+ GOLDEN DUST
+========================== */
+
+
+.sparkles span{
+
+
+position:absolute;
+
+width:5px;
+
+height:5px;
+
+
+background:#ffd27d;
+
+
+border-radius:50%;
+
+
+animation:sparkle 5s infinite;
+
+
+z-index:4;
+
+
+}
+
+
+
+@keyframes sparkle{
+
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+
+50%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:translateY(-300px);
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+
+/* ==========================
+ COVER OPEN
+========================== */
+
+
+.cover{
+
+transform-origin:left;
+
+transition:2s;
+
+}
+
+
+
+.cover.open{
+
+transform:
+
+rotateY(-160deg);
+
+}
+
+/* ===============================
+   TABLET RESPONSIVE
+================================= */
+
+@media (max-width: 1024px){
+
+    body{
+        height:auto;
+        min-height:100vh;
+        overflow-x:hidden;
+        overflow-y:auto;
+        padding:30px 0;
+    }
+
+
+    .book-area{
+
+        width:100%;
+        min-height:100vh;
+
+    }
+
+
+    #book{
+
+        width:75vw;
+        height:52vw;
+        max-width:620px;
+        max-height:430px;
+
+    }
+
+
+    .cover h1{
+
+        font-size:36px;
+
+    }
+
+
+    .cover h2{
+
+        font-size:32px;
+
+    }
+
+
+    .reason-page{
+
+        padding:35px;
+
+    }
+
+
+    .reason-page h2{
+
+        font-size:40px;
+
+    }
+
+
+    .reason-page p{
+
+        font-size:22px;
+
+    }
+
+}
+
+
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width:700px){
+
+
+    body{
+
+        height:auto;
+        min-height:100vh;
+
+        overflow-x:hidden;
+        overflow-y:auto;
+
+        display:flex;
+
+        align-items:flex-start;
+
+        padding-top:80px;
+
+    }
+
+
+    .back{
+
+        top:15px;
+        left:15px;
+
+        padding:8px 18px;
+
+        font-size:13px;
+
+    }
+
+
+
+    #musicBtn{
+
+        top:15px;
+        right:15px;
+
+        padding:10px 18px;
+
+        font-size:12px;
+
+    }
+
+
+
+    .book-area{
+
+        width:100%;
+
+        min-height:auto;
+
+        perspective:1200px;
+
+    }
+
+
+
+    #book{
+
+        width:92vw;
+
+        height:65vw;
+
+        max-height:420px;
+
+    }
+
+
+
+    .cover-inner{
+
+        padding:15px;
+
+    }
+
+
+
+    .cover h1{
+
+        font-size:25px;
+
+        letter-spacing:2px;
+
+    }
+
+
+    .cover h2{
+
+        font-size:24px;
+
+    }
+
+
+
+    .cover p{
+
+        font-size:14px;
+
+        line-height:1.5;
+
+    }
+
+
+
+    .seal{
+
+        width:50px;
+        height:50px;
+
+        font-size:22px;
+
+    }
+
+
+
+    .reason-page{
+
+        padding:20px;
+
+    }
+
+
+
+    .reason-page h2{
+
+        font-size:30px;
+
+    }
+
+
+
+    .reason-page p{
+
+        font-size:17px;
+
+        line-height:1.5;
+
+    }
+
+
+
+    .ending{
+
+        padding:20px;
+
+    }
+
+
+
+    .ending h1{
+
+        font-size:30px;
+
+    }
+
+
+
+    .ending p{
+
+        font-size:18px;
+
+    }
+
+
+}
+
+
+
+/* ===============================
+   SMALL MOBILE
+================================= */
+
+@media(max-width:400px){
+
+
+    #book{
+
+        width:95vw;
+
+        height:70vw;
+
+    }
+
+
+    .cover h1{
+
+        font-size:22px;
+
+    }
+
+
+    .cover h2{
+
+        font-size:20px;
+
+    }
+
+
+    .reason-page p{
+
+        font-size:15px;
+
+    }
+
+}

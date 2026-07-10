@@ -1,0 +1,1985 @@
+/* =====================================================
+   dashboard.css  (PART 1)
+   Paste from the TOP of dashboard.css
+   Replace everything before your old CSS
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    radial-gradient(circle at top,
+    #7b5338,
+    #5b3826 45%,
+    #38241a 100%);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================
+        BOOK WRAPPER
+========================== */
+
+.book-wrapper{
+
+    width:min(1120px,96vw);
+
+    margin:15px auto;
+
+    transform-origin:top center;
+
+}
+
+/* ==========================
+        BOOK SHADOW
+========================== */
+
+.book-shadow{
+
+    position:absolute;
+
+    width:94%;
+
+    height:70px;
+
+    bottom:-35px;
+
+    left:3%;
+
+    background:rgba(0,0,0,.35);
+
+    filter:blur(30px);
+
+    border-radius:50%;
+
+}
+
+/* ==========================
+        BOOK
+========================== */
+
+.book{
+
+    display:flex;
+
+    position:relative;
+
+   
+
+    width:100%;
+
+    height:780px;
+
+    min-height:780px;
+
+
+
+    perspective:2500px;
+
+    animation:bookFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes bookFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================
+      LEFT PAGE
+========================== */
+
+.left-page{
+
+    width:28%;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px 0 0 28px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #faf0da,
+    #f0dfc1);
+
+    box-shadow:
+
+    inset 0 0 50px rgba(0,0,0,.12),
+
+    -20px 20px 45px rgba(0,0,0,.45);
+
+}
+
+/* ==========================
+      RIGHT PAGE
+========================== */
+
+.right-page{
+
+    flex:1;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:0 28px 28px 0;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #fff8ea,
+    #f4e7c8);
+
+    box-shadow:
+
+    inset 0 0 50px rgba(0,0,0,.10),
+
+    20px 20px 45px rgba(0,0,0,.45);
+
+}
+
+/* ==========================
+      PAPER TEXTURE
+========================== */
+
+.page-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.35;
+
+    background-image:
+
+    radial-gradient(
+    rgba(120,80,40,.10) 1px,
+    transparent 1px);
+
+    background-size:18px 18px;
+
+}
+
+/* ==========================
+      PAGE EDGES
+========================== */
+
+.left-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    right:0;
+
+    width:20px;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(to right,
+    transparent,
+    rgba(0,0,0,.10));
+
+}
+
+.right-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:20px;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(to left,
+    transparent,
+    rgba(0,0,0,.10));
+
+}
+
+/* ==========================
+        BOOK SPINE
+========================== */
+
+.book-spine{
+
+    width:46px;
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+    to right,
+    #4e2d1d,
+    #73482f,
+    #8d6240,
+    #73482f,
+    #4e2d1d);
+
+    box-shadow:
+
+    inset 3px 0 5px rgba(255,255,255,.20),
+
+    inset -3px 0 6px rgba(0,0,0,.40);
+
+}
+
+/* Golden Lines */
+
+.spine-line{
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:5px;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+    #ffeab0,
+    #b47a35,
+    #ffeab0);
+
+}
+
+.spine-line.two{
+
+    left:62%;
+
+    width:2px;
+
+    opacity:.45;
+
+}
+
+/* Bookmark */
+
+.bookmark{
+
+    position:absolute;
+
+    top:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:18px;
+
+    height:120px;
+
+    background:#8b1d24;
+
+    border-radius:0 0 10px 10px;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.25);
+
+}
+/* =====================================================
+   dashboard.css (PART 2)
+   Paste BELOW PART 1
+   Sidebar + Profile + Left Page Styling
+===================================================== */
+
+/* ==========================
+        SIDEBAR
+========================== */
+
+.sidebar{
+
+position: sticky;
+top: 0;
+height: 100%;
+    z-index:2;
+    padding: 18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/* ==========================
+        PROFILE
+========================== */
+
+.profile{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+}
+
+.profile-frame{
+
+  width:72px;
+    height:72px;
+
+    margin:auto;
+
+    padding:6px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #d4a55e,
+    #f4deb0,
+    #b67a33);
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.25);
+
+}
+
+.profile img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:4px solid #fff7ea;
+
+    transition:.5s;
+
+}
+
+.profile img:hover{
+
+    transform:scale(1.08)
+              rotate(3deg);
+
+}
+
+.profile h2{
+
+  font-size:17px;
+
+    margin-top:10px;
+
+    color:#5d341d;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.profile p{
+
+    color:#8f6546;
+
+     font-size:13px;
+
+    margin-top:4px;
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================
+        MENU
+========================== */
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar ul li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:6px;
+
+    padding:10px 12px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:#4d2f1f;
+
+    transition:.35s;
+
+    font-weight:500;
+
+}
+
+.sidebar ul li i{
+
+    width:18px;
+
+    font-size:16px;
+
+    color:#9d6c3b;
+
+    transition:.35s;
+
+}
+
+.sidebar ul li span{
+
+    font-size:15px;
+
+}
+
+.sidebar ul li:hover{
+
+    background:#7b5338;
+
+    color:#fff;
+
+    transform:translateX(8px);
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.sidebar ul li:hover i{
+
+    color:#ffe8ba;
+
+}
+
+.sidebar ul li.active{
+
+    background:#5f3a26;
+
+    color:#fff;
+
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.sidebar ul li.active i{
+
+    color:#ffe8ba;
+
+}
+
+/* ==========================
+      LEFT FOOTER QUOTE
+========================== */
+
+
+.left-footer{
+
+    margin-top:auto;
+
+    flex-shrink:0; 
+
+    width:100%;
+
+    min-height:70px;
+
+    padding: 10px;
+
+    background:rgba(255,255,255,.22);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    box-sizing:border-box;
+
+}
+
+.left-footer p{
+
+    margin:0;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:17px;
+
+    line-height:1.55;
+
+    color:#6a4631;      /* Tumhara original color */
+
+    font-style:italic;
+
+    font-weight:600;
+
+    letter-spacing:.2px;
+
+    word-break:normal;
+
+    overflow-wrap:break-word;
+
+}
+
+/* ==========================
+      MAIN CONTENT
+========================== */
+
+main{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:22px 28px;
+
+}
+
+/* ==========================
+      HEADER
+========================== */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:12px;
+
+    padding-bottom:22px;
+
+    border-bottom:2px dashed
+    rgba(120,80,40,.25);
+
+}
+
+header h1{
+
+    font-size:clamp(28px,3vw,48px);
+
+    color:#5a321b;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+}
+
+.small-title{
+
+    color:#9d6c3b;
+
+    margin-top:6px;
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================
+      SEARCH
+========================== */
+
+.search input{
+
+    width:clamp(180px,25vw,280px);
+
+    padding:15px 22px;
+
+    border-radius:40px;
+
+    border:2px solid #d6b68c;
+
+    background:#fffef9;
+
+    outline:none;
+
+    color:#5a321b;
+
+    transition:.35s;
+
+}
+
+.search input:focus{
+
+    border-color:#8a5d3c;
+
+    box-shadow:
+    0 0 20px rgba(138,93,60,.18);
+
+    transform:scale(1.02);
+
+}
+/* =====================================================
+   dashboard.css  (PART 3)
+   Paste BELOW PART 2
+===================================================== */
+
+/* ==========================
+        HEADER
+========================== */
+
+header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:12px;
+
+    padding-bottom:22px;
+
+    border-bottom:2px dashed rgba(140,95,60,.25);
+
+}
+
+header h1{
+
+    font-family:'Cormorant Garamond',serif;
+font-size:clamp(28px,3vw,48px);
+
+    color:#5d3622;
+
+    line-height:1;
+
+}
+
+.small-title{
+
+    margin-top:8px;
+
+    font-size:15px;
+
+    letter-spacing:3px;
+
+    color:#9a714d;
+
+    text-transform:uppercase;
+
+}
+
+.search{
+
+    position:relative;
+
+}
+
+.search input{
+
+    width:320px;
+
+    height:52px;
+
+    border:none;
+
+    outline:none;
+
+    padding:0 22px;
+
+    border-radius:40px;
+
+    background:#fffefb;
+
+    color:#5d3622;
+
+    font-size:15px;
+
+    border:2px solid #dcc39c;
+
+    transition:.35s;
+
+    box-shadow:
+    inset 0 0 12px rgba(0,0,0,.05);
+
+}
+
+.search input:focus{
+
+    border-color:#9b6b3d;
+
+    box-shadow:
+
+    0 0 18px rgba(155,107,61,.20);
+
+}
+
+/* ==========================
+        HERO
+========================== */
+
+.hero{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:16px 20px;
+height: auto;
+min-height: auto;
+    margin-bottom:25px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #fef8ea,
+    #f3e4c8);
+
+    border:2px solid #e0c7a2;
+
+    box-shadow:
+
+    0 18px 35px rgba(0,0,0,.12);
+
+}
+
+/* paper texture */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.30;
+
+    background-image:
+
+    radial-gradient(
+    rgba(120,70,40,.08) 1px,
+    transparent 1px);
+
+    background-size:18px 18px;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:#8b5e3c;
+
+    color:#fff;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    margin-bottom:20px;
+
+}
+
+.hero h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+ font-size:30px;
+    color:#5a331d;
+
+    margin-bottom:18px;
+
+    line-height:1.1;
+
+}
+
+.hero p{
+
+    max-width:600px;
+
+    color:#6d4a34;
+
+    line-height:1.6;
+
+margin-bottom:18px;
+    font-size:14px;
+
+}
+
+.hero button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:16px 38px;
+
+    border-radius:40px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #7d4c31,
+    #5f3522);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 12px 25px rgba(0,0,0,.18);
+
+}
+
+.hero button:hover{
+
+    transform:
+
+    translateY(-5px);
+
+    box-shadow:
+
+    0 18px 35px rgba(0,0,0,.22);
+
+}
+
+/* ==========================
+        HERO IMAGE
+========================== */
+
+.hero-image{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-15px;
+
+    border:2px dashed #d8b48c;
+
+    border-radius:22px;
+
+    transform:rotate(-3deg);
+
+}
+
+.hero-image img{
+
+    width:170px;
+
+    border-radius:18px;
+
+    border:8px solid white;
+
+    object-fit:cover;
+
+    transform:rotate(4deg);
+
+    transition:.45s;
+
+    box-shadow:
+
+    0 18px 35px rgba(0,0,0,.22);
+
+}
+
+.hero-image img:hover{
+
+    transform:
+
+    rotate(0deg)
+
+    scale(1.05);
+
+}
+
+/* ==========================
+        SECTION TITLE
+========================== */
+
+.heading{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:34px;
+
+    color:#5a331d;
+
+    margin-bottom:18px;
+
+}
+/* =====================================================
+   dashboard.css  (PART 4)
+   Paste BELOW PART 3
+===================================================== */
+
+/* =====================================
+        LOVE LIBRARY
+===================================== */
+
+.library{
+
+    margin-top:10px;
+
+}
+
+.library-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:22px;
+
+}
+
+.library-title span{
+
+    font-size:32px;
+
+}
+
+.library-title h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:36px;
+
+    color:#5c341f;
+
+}
+
+/* =====================================
+        GRID
+===================================== */
+.library-grid{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:nowrap;      /* Sab ek line me */
+
+    overflow-x:auto;       /* Mobile me scroll */
+
+    padding:5px 0;
+
+    scrollbar-width:none;
+
+}
+
+.library-grid::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+/* =====================================
+        BOOK
+===================================== */
+
+.book-card{
+
+    position:relative;
+    cursor:pointer;
+    width:135px;
+    height:85px;
+    display:flex;
+    flex:0 0 auto;
+    perspective:1200px;
+
+    transition:
+        transform .45s ease,
+        filter .45s ease;
+}
+
+/* =====================================
+        SPINE
+===================================== */
+
+.book-card .book-spine{
+
+    width:10px;
+
+    border-radius:10px 0 0 10px;
+
+    background:
+
+    linear-gradient(
+
+    to right,
+
+    #4d2918,
+
+    #7b4f33,
+
+    #5b341f
+
+    );
+
+}
+
+
+/* =====================================
+        COVER
+===================================== */
+
+.book-cover{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:0 16px 16px 0;
+
+    background:linear-gradient(
+        145deg,
+        #6b4329 0%,
+        #8b5e3c 50%,
+        #6b4329 100%
+    );
+
+    border:2px solid #d8b07d;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease;
+}
+
+
+/* leather */
+
+.book-cover::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:8px;
+
+    border:2px solid rgba(255,220,170,.35);
+
+    border-radius:10px;
+
+}
+
+
+/* =====================================
+        ICON
+===================================== */
+
+.book-cover i{
+
+    font-size:18px;
+    color:#ffd77a;
+    margin-bottom:8px;
+
+    transition:
+        transform .35s ease,
+        color .35s ease;
+}
+
+
+/* =====================================
+        TITLE
+===================================== */
+
+.book-cover h4{
+
+    color:#fff8e7;
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;
+    letter-spacing:.5px;
+
+    transition:
+        color .35s ease,
+        transform .35s ease;
+}
+
+
+/* =====================================
+        HOVER
+===================================== */
+.book-card:hover{
+
+    transform:
+        translateY(-6px)
+        rotateY(-5deg)
+        scale(1.03);
+
+}
+
+.book-card:hover .book-cover
+{
+
+    transform:rotateY(-8deg);
+
+    transform-origin:left center;
+
+    box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+    /* Background yahan mat dena */
+}
+
+.book-card:hover .book-cover i{
+
+    transform:scale(1.12) rotate(-6deg);
+
+}
+
+.book-card:hover .book-cover h4{
+
+    color:#ffe4a8;
+    transform:translateY(2px);
+
+}
+
+/* ==========================
+      HERO BUTTON EXTRA
+========================== */
+
+.hero button:active{
+
+    transform:scale(.96);
+
+}
+
+/* ==========================
+      SEARCH PLACEHOLDER
+========================== */
+
+.search input::placeholder{
+
+    color:#9c7756;
+
+}
+
+/* ==========================
+      SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#e8d4b2;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#8a5b38;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#6d4328;
+
+}
+/* =====================================================
+   dashboard.css (PART 5 - FINAL)
+   Paste BELOW PART 4
+===================================================== */
+
+
+/* ==========================================
+      BOOK DEPTH
+========================================== */
+
+.book::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-18px;
+
+    top:20px;
+
+    width:18px;
+
+    height:96%;
+
+    border-radius:18px 0 0 18px;
+
+    background:
+
+    linear-gradient(
+    to left,
+    #cdb08a,
+    #f5e8ce);
+
+}
+
+.book::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-18px;
+
+    top:20px;
+
+    width:18px;
+
+    height:96%;
+
+    border-radius:0 18px 18px 0;
+
+    background:
+
+    linear-gradient(
+    to right,
+    #cdb08a,
+    #f5e8ce);
+
+}
+
+
+/* ==========================================
+      PAGE SHADOW
+========================================== */
+
+.left-page{
+
+    transition:.45s;
+
+}
+
+.right-page{
+
+    transition:.45s;
+
+}
+
+.book:hover .left-page{
+
+    transform:rotateY(2deg);
+
+}
+
+.book:hover .right-page{
+
+    transform:rotateY(-2deg);
+
+}
+
+
+/* ==========================================
+      BOOKMARK
+========================================== */
+
+.bookmark{
+
+    animation:bookmarkMove 3s ease-in-out infinite;
+
+}
+
+@keyframes bookmarkMove{
+
+0%{
+
+transform:translateX(-50%);
+
+}
+
+50%{
+
+transform:
+translateX(-50%)
+translateY(10px);
+
+}
+
+100%{
+
+transform:translateX(-50%);
+
+}
+
+}
+
+
+/* ==========================================
+      PROFILE
+========================================== */
+
+.profile{
+
+    animation:fadeUp .8s ease;
+
+}
+
+header{
+
+    animation:fadeUp .8s ease;
+
+}
+
+.hero{
+
+    animation:fadeUp 1s ease;
+
+}
+
+.heading{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.card{
+
+    animation:fadeUp 1.3s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* ==========================================
+      HOVER EFFECT
+========================================== */
+
+.book{
+
+    transition:.5s;
+
+}
+
+.book:hover{
+
+    transform:
+
+    rotateX(1deg)
+
+    rotateY(-1deg);
+
+}
+
+
+/* ==========================================
+      RESPONSIVE
+========================================== */
+@media(max-width:992px){
+
+body{
+
+padding:15px;
+
+}
+
+.book{
+
+flex-direction:column;
+
+}
+
+.book-spine{
+
+display:none;
+
+}
+
+.left-page,
+.right-page{
+
+width:100%;
+
+border-radius:25px;
+
+}
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-image img{
+
+width:220px;
+
+}
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+.search{
+
+width:100%;
+
+}
+
+.search input{
+
+width:100%;
+
+}
+
+.hero{
+
+padding:25px;
+
+}
+
+main{
+
+padding:22px;
+
+}
+
+.sidebar{
+
+padding:22px;
+
+}
+
+}
+
+
+
+/* =========================================================
+        LIBRARY FINAL + RESPONSIVE
+        Paste BELOW Library Part-1
+========================================================= */
+
+
+/* =====================================
+        GOLDEN SHINE
+===================================== */
+
+.book-cover::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-130%;
+
+    width:70px;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.35),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+}
+
+.book-card:hover .book-cover::after{
+
+    animation:shine .9s linear;
+
+}
+
+@keyframes shine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:140%;
+
+}
+
+}
+
+
+/* =====================================
+        HEART EMBOSS
+===================================== */
+
+.book-cover{
+
+    position:relative;
+
+}
+
+.book-cover::before{
+
+    content:"❤";
+
+    position:absolute;
+
+    top:14px;
+
+    right:16px;
+
+    font-size:14px;
+
+    color:rgba(255,230,180,.55);
+
+    border:none;
+
+    inset:auto;
+
+}
+
+
+/* =====================================
+        BOOK OPEN EFFECT
+===================================== */
+
+.book-card{
+
+    transform-style:preserve-3d;
+
+}
+
+.book-card:hover .book-cover{
+
+    transform:
+
+    rotateY(-12deg);
+
+}
+
+
+/* =====================================
+        BOOK PRESS EFFECT
+===================================== */
+
+.book-card:active{
+
+    transform:
+
+    scale(.97);
+
+}
+
+
+/* =====================================
+        RESPONSIVE
+===================================== */
+@media(max-width:1200px){
+
+.book-wrapper{
+
+transform:scale(.90);
+
+width:1120px;
+
+margin:auto;
+
+}
+
+}
+
+@media(max-width:992px){
+
+.book-wrapper{
+
+transform:scale(.78);
+
+width:1120px;
+
+margin:auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.book-wrapper{
+
+transform:scale(.64);
+
+width:1120px;
+
+margin:auto;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.book-wrapper{
+
+transform:scale(.50);
+
+width:1120px;
+
+margin:auto;
+
+}
+
+}
+
+
+
+body{
+
+    overflow-x:hidden;
+
+    overflow-y:auto;
+
+}
+
+.book-wrapper{
+
+    width:min(1200px,95vw);
+
+    margin:30px auto;
+
+}
+
+.book{
+
+    min-height:100vh;
+
+}
+
+.left-page{
+
+    overflow:hidden;
+
+}
+
+.right-page{
+
+    overflow:visible;
+
+}
+
+/* ==========================================
+      MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+    .book{
+
+        flex-direction:column;
+
+        height:auto;
+
+        min-height:auto;
+
+        animation:none;
+
+    }
+
+    .left-page{
+
+        width:100%;
+
+        border-radius:25px 25px 0 0;
+
+    }
+
+    .book-spine{
+
+        display:none;
+
+    }
+
+    .right-page{
+
+        width:100%;
+
+        border-radius:0 0 25px 25px;
+
+    }
+
+    .sidebar{
+
+        height:auto;
+
+    }
+
+    .library-grid{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:12px;
+
+    }
+
+    .book-card{
+
+        width:100%;
+
+        height:90px;
+
+    }
+
+    header{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .hero-image img{
+
+        width:180px;
+
+    }
+
+}
+/* ======================================
+        MOBILE FIX
+====================================== */
+
+@media (max-width:768px){
+
+    .book{
+
+        height:auto !important;
+
+        min-height:auto !important;
+
+    }
+
+    .hero{
+
+        flex-direction:column;
+
+        height:auto !important;
+
+        min-height:auto !important;
+
+        padding:18px;
+
+    }
+
+    .hero-image{
+
+        margin-top:15px;
+
+    }
+
+    .hero-image img{
+
+        width:170px;
+
+        height:auto;
+
+    }
+
+    .left-page
+    {
+
+        height:auto !important;
+
+    }
+
+    .right-page{
+
+        height:auto !important;
+
+    }
+
+    main{
+
+        height:auto !important;
+
+    }
+
+}

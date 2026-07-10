@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Secret Diary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <header>
+      <div class="left">
+        <h1>Our Secret Diary</h1>
+        <p class="tagline">❤ A space just for you and me.</p>
+        <p class="description">
+          This isn't just a diary. It's a collection of my thoughts, our
+          memories, my feelings, and every little thing I wanted to tell you.
+          Made with all my love.
+        </p>
+        <button onclick="location.href = 'login.html'">Enter Diary ❤</button>
+      </div>
+      <div class="center"><img src="images/diary.png" class="diary" /></div>
+      <div class="right">
+        <div class="login-card">
+          <i class="fa-solid fa-heart heart"></i>
+          <h2>Enter Password</h2>
+          <p>This diary is protected with lots of love ❤</p>
+          <input type="password" placeholder="Enter Password" id="password" />
+<button id="unlockBtn" onclick="checkPassword()">Unlock Diary</button>          <small> Only you can unlock this ❤ </small>
+        </div>
+      </div>
+    </header>
+    <div class="floating-hearts">
+      <span>❤</span> <span>❤</span> <span>❤</span> <span>❤</span> <span>❤</span>
+    </div>
+    <script src="js/password.js"></script>
+  </body>
+</html>

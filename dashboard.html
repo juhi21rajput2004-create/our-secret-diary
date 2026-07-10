@@ -1,0 +1,375 @@
+<!-- ========================= -->
+<!-- dashboard.html (PART 1) -->
+<!-- Paste from <!DOCTYPE html> -->
+<!-- up to Hero Section -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Our Secret Diary</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="book-wrapper">
+
+<div class="book-shadow"></div>
+
+<div class="book">
+
+    <!-- ========================= -->
+    <!-- LEFT PAGE -->
+    <!-- ========================= -->
+
+    <section class="left-page">
+
+        <div class="page-overlay"></div>
+
+        <aside class="sidebar">
+
+            <div class="profile">
+
+                <div class="profile-frame">
+
+                    <img src="images/profile.jpg"
+                        alt="Profile">
+
+                </div>
+
+                <h2>Juhi ❤️ Shobhit</h2>
+
+                <p>Forever Together</p>
+
+            </div>
+
+            <ul>
+
+                <li class="active"
+                    onclick="window.location.href='dashboard.html'">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Home</span>
+
+                </li>
+
+                <li
+                    onclick="window.location.href='letters.html'">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span>Letters</span>
+
+                </li>
+
+                <li
+                    onclick="window.location.href='book.html'">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <span>Reasons</span>
+
+                </li>
+
+                <li
+                    onclick="window.location.href='gallery.html'">
+
+                    <i class="fa-solid fa-image"></i>
+
+                    <span>Gallery</span>
+
+                </li>
+
+                <li
+                    onclick="window.location.href='timeline.html'">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <span>Timeline</span>
+
+                </li>
+
+                <li
+                    onclick="window.location.href='song.html'">
+
+                    <i class="fa-solid fa-music"></i>
+
+                    <span>Our Song</span>
+
+                </li>
+
+                <li onclick="logout()">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </li>
+
+            </ul>
+
+            <div class="left-footer">
+
+                <p>
+
+                    “Every page I write...<br>
+                    becomes another reason<br>
+                    to love you.”
+
+                </p>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- BOOK SPINE -->
+    <!-- ========================= -->
+
+    <div class="book-spine">
+
+        <div class="spine-line"></div>
+
+        <div class="spine-line two"></div>
+
+        <div class="bookmark"></div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- RIGHT PAGE -->
+    <!-- ========================= -->
+
+    <section class="right-page">
+
+        <div class="page-overlay"></div>
+
+        <main>
+
+            <header>
+
+                <div>
+
+                    <h1>Hello My Love ❤️</h1>
+
+                    <p class="small-title">
+
+                        Our Secret Diary
+
+                    </p>
+
+                </div>
+
+                <div class="search">
+
+                    <input
+                        type="text"
+                        placeholder="Search memories...">
+
+                </div>
+
+            </header>
+
+            <!-- HERO -->
+
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <span class="hero-tag">
+
+                        OUR LOVE STORY
+
+                    </span>
+
+                    <h2>
+
+                        Welcome To
+                        Our Secret Diary
+
+                    </h2>
+
+                    <p>
+
+                        Every page of this diary
+                        holds a memory,
+
+                        every memory holds
+                        a smile,
+
+                        and every smile
+                        reminds me of you.
+
+                    </p>
+
+                    <button
+                        onclick="window.location.href='letter-view.html?letter=1'">
+
+                        Open Today's Letter ❤️
+
+                    </button>
+
+                </div>
+
+                <div class="hero-image">
+
+                    <img src="images/profile4.jpg"
+                        alt="Diary">
+
+                </div>
+
+            </section>
+
+            <h2 class="heading">
+
+                Explore Our Love Story
+
+            </h2>
+<!-- ========================= -->
+
+<div class="library">
+
+
+    <div class="library-grid">
+
+        <div class="book-card"
+            onclick="window.location.href='letters.html'">
+
+            <div class="book-spine"></div>
+
+            <div class="book-cover">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <h4>Letters</h4>
+
+            </div>
+
+        </div>
+
+
+        <div class="book-card"
+            onclick="window.location.href='book.html'">
+
+            <div class="book-spine"></div>
+
+            <div class="book-cover">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <h4>100 Reasons</h4>
+
+            </div>
+
+        </div>
+
+
+        <div class="book-card"
+            onclick="window.location.href='gallery.html'">
+
+            <div class="book-spine"></div>
+
+            <div class="book-cover">
+
+                <i class="fa-solid fa-camera"></i>
+
+                <h4>Memories</h4>
+
+            </div>
+
+        </div>
+
+
+        <div class="book-card"
+            onclick="window.location.href='surprises.html'">
+
+            <div class="book-spine"></div>
+
+            <div class="book-cover">
+
+                <i class="fa-solid fa-gift"></i>
+
+                <h4>Surprises</h4>
+
+            </div>
+
+        </div>
+
+
+        <div class="book-card"
+            onclick="window.location.href='dreams.html'">
+
+            <div class="book-spine"></div>
+
+            <div class="book-cover">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h4>Dreams</h4>
+
+            </div>
+
+        </div>
+
+
+        <div class="book-card"
+            onclick="window.location.href='timeline.html'">
+
+            <div class="book-spine"></div>
+
+            <div class="book-cover">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h4>Timeline</h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+NEXT MESSAGE:
+dashboard.css Library Part-1
+========================= -->
+
+</main>
+
+</section>
+
+</div>
+
+</div>
+
+<script src="js/password.js"></script>
+
+</body>
+
+</html>
+            

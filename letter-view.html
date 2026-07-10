@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Love Letter ❤️</title>
+
+<link rel="stylesheet" href="css/letters.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💌 My Letter</h1>
+
+<div class="letter-card">
+
+<p id="letterText"></p>
+
+</div>
+
+</div>
+
+<script>
+
+const letters = {
+
+1: `My Love,
+
+The first day we met,
+I never imagined someone would become my entire world.
+
+Thank you for coming into my life. ❤️`,
+
+2: `You are my peace,
+my happiness,
+my biggest support,
+and my favourite person.
+
+I love everything about you. ❤️`,
+
+3: `I dream of growing old with you,
+travelling together,
+building our home,
+and creating thousands of memories. ❤️`,
+
+4: `Whenever you miss me,
+
+Close your eyes.
+
+Smile.
+
+I'm always with you,
+no matter how far we are.
+
+I love you forever. ❤️`
+
+};
+
+const params = new URLSearchParams(window.location.search);
+
+const id = params.get("letter");
+
+document.getElementById("letterText").innerText = letters[id] || "Letter not found ❤️";
+
+</script>
+
+</body>
+
+</html>
