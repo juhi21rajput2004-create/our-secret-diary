@@ -4,7 +4,7 @@ const memories = [
 "❤️ The first time we talked.",
 "❤️ The day I realized I liked you.",
 "❤️ When you first called me Bacha.",
-"❤️ When you called me Meri Pari.",
+"❤️ When you called me Meri pagalii.",
 "❤️ Our first Good Morning.",
 "❤️ Our first Good Night.",
 "❤️ The first time you made me smile without trying.",

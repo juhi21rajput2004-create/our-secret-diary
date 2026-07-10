@@ -570,9 +570,9 @@ h1{
 
 #letterText{
 
-    font-size:22px;
+    font-size:15px;
 
-    line-height:1.8;
+    line-height:1.6;
 
     padding:25px;
 
@@ -625,7 +625,7 @@ h1{
 
 .letter-card h2{
 
-    font-size:24px;
+    font-size:10px;
 
 }
 
@@ -633,7 +633,7 @@ h1{
 
 .letter-card p{
 
-    font-size:14px;
+    font-size:5px;
 
 }
 
@@ -654,9 +654,9 @@ h1{
 #letterText{
 
 
-    font-size:19px;
+    font-size:8px;
 
-    line-height:1.7;
+    line-height:1.2;
 
     padding:20px;
 
@@ -697,9 +697,9 @@ h1{
 #letterText{
 
 
-    font-size:17px;
+    font-size:10px;
 
-    line-height:1.6;
+    line-height:1.2;
 
     padding:16px;
 
@@ -710,7 +710,7 @@ h1{
 
 .letter-card h2{
 
-    font-size:21px;
+    font-size:5px;
 
 }
 

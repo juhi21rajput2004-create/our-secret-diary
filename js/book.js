@@ -23,7 +23,7 @@ const reasons = [
 
 "❤️ Because tum sirf mere boyfriend nahi... meri safest place ho.",
 
-"❤️ Because jab tum mujhe 'Meri Pari' bulate ho na... dil automatically smile karne lagta hai.",
+"❤️ Because jab tum mujhe 'Meri wifey' bulate ho na... dil automatically smile karne lagta hai.",
 
 "❤️ Because tumhara 'Bacha' bolna duniya ka sabse cute word lagta hai.",
 
@@ -63,7 +63,7 @@ const reasons = [
 
 "❤️ Because tum jaante ho ki main nakhre karungi... phir bhi mujhe mana lete ho.",
 
-"❤️ Because tum meri life ke sabse handsome Genius ho. 🤍",
+"❤️ Because tum meri life ke best part ho. 🤍",
 
 "❤️ Because tumhare bina har khushi thodi si adhoori lagti hai.",
 
@@ -117,7 +117,7 @@ const reasons = [
 
 "❤️ Because tumhare 'I Love You Bacha' me duniya ka sabse pyara feeling hota hai.",
 
-"❤️ Because tum mujhe kabhi Wifeyy, kabhi Pari aur kabhi Pagal bolte ho... aur mujhe teeno hi bahut pasand hain. 🤍",
+"❤️ Because tum mujhe kabhi Wifeyy, kabhi Bacha aur kabhi Pagal bolte ho... aur mujhe teeno hi bahut pasand hain. 🤍",
 
 "❤️ Because tumhara 'Kya kar rahi ho Bacha?' message mera favourite notification hota hai.",
 
