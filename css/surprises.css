@@ -1,126 +1,725 @@
-body{
+/* =====================================
+        SECRET SURPRISE DIARY CSS
+        CREAMY VINTAGE THEME
+===================================== */
 
-background:#2b1d17;
-font-family:Poppins,sans-serif;
-color:white;
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 
 }
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:#f6dfb8;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+
+    background:
+    linear-gradient(
+        rgba(35,20,12,.82),
+        rgba(35,20,12,.82)
+    ),
+    url("https://images.unsplash.com/photo-1512820790803-83ca734da794");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+
+
+/* =====================================
+        MAIN CONTAINER
+===================================== */
+
 
 .container{
 
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:50px 0;
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:45px 0;
 
 }
+
+
+
+/* =====================================
+        BACK BUTTON
+===================================== */
+
 
 .back{
 
-display:inline-block;
-padding:12px 25px;
-background:#7b4f35;
-color:white;
-text-decoration:none;
-border-radius:30px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    color:#fff3dc;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #8b5a35,
+        #5d341c
+    );
+
+
+    padding:13px 28px;
+
+    border-radius:40px;
+
+
+    border:1px solid rgba(255,220,160,.5);
+
+
+    box-shadow:
+
+    0 8px 20px rgba(80,40,10,.3);
+
+
+    transition:.35s;
+
 
 }
+
+
+
+.back:hover{
+
+
+    transform:translateY(-4px);
+
+
+    box-shadow:
+
+    0 15px 30px rgba(80,40,10,.45);
+
+
+}
+
+
+
+
+
+/* =====================================
+        TITLE
+===================================== */
+
 
 h1{
 
-text-align:center;
-font-size:55px;
-margin:20px 0;
+
+    text-align:center;
+
+
+    margin-top:35px;
+
+    font-size:65px;
+
+
+     color:#ffe4b5;
+
+    font-family:'Cormorant Garamond',serif;
+
+    text-shadow:
+    0 3px 8px rgba(0,0,0,.45);
+
 
 }
+
+
 
 .subtitle{
 
-text-align:center;
-margin-bottom:50px;
-color:#d8b29c;
+
+    text-align:center;
+
+
+    margin-top:15px;
+
+
+    margin-bottom:55px;
+
+
+    font-size:18px;
+
+
+    color:#805533;
+
 
 }
+
+
+
+/* =====================================
+        GIFT GRID
+===================================== */
+
 
 .gift-grid{
 
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:30px;
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(240px,1fr));
+
+
+    gap:35px;
+
 
 }
+
+
+
+
+/* =====================================
+        GIFT CARD
+===================================== */
+
 
 .gift{
 
-background:#4e3226;
-border-radius:25px;
-padding:50px;
-text-align:center;
-cursor:pointer;
-transition:.4s;
-font-size:60px;
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:
+
+
+    linear-gradient(
+        145deg,
+        #fff2d5,
+        #e8c999
+    );
+
+
+    border-radius:28px;
+
+
+    padding:55px 30px;
+
+
+    text-align:center;
+
+
+    cursor:pointer;
+
+
+    font-size:70px;
+
+
+    border:
+
+    1px solid rgba(120,70,25,.25);
+
+
+    box-shadow:
+
+
+    0 15px 35px rgba(80,40,10,.25),
+
+
+    inset 0 0 25px rgba(255,255,255,.5);
+
+
+    transition:.4s;
+
 
 }
+
+
+
+
 
 .gift:hover{
 
-transform:translateY(-10px);
+
+    transform:
+
+    translateY(-12px)
+    rotate(-1deg);
+
+
+    box-shadow:
+
+
+    0 25px 45px rgba(80,40,10,.35);
+
 
 }
+
+
+
+/* shine */
+
+
+.gift::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+    left:-100%;
+
+
+    width:70%;
+
+
+    height:100%;
+
+
+    background:
+
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.5),
+
+    transparent
+
+    );
+
+
+    transition:.8s;
+
+
+}
+
+
+
+.gift:hover::before{
+
+
+    left:130%;
+
+
+}
+
+
+
+
 
 .gift h2{
 
-font-size:24px;
-margin-top:20px;
+
+    margin-top:25px;
+
+
+    font-family:
+
+    'Cormorant Garamond',
+    serif;
+
+
+    font-size:30px;
+
+
+    color:#6b3d20;
+
 
 }
 
-.lock{
 
-background:#6a4632;
+
+
+
+/* FINAL GIFT */
+
+
+.final{
+
+
+    background:
+
+
+    linear-gradient(
+
+    145deg,
+
+    #efd5a8,
+
+    #c9995e
+
+    );
+
 
 }
+
+
+
+
+
+
+/* =====================================
+        POPUP OVERLAY
+===================================== */
+
 
 #popup{
 
-display:none;
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.8);
-justify-content:center;
-align-items:center;
+
+    display:none;
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    background:
+
+    rgba(40,20,10,.65);
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    z-index:100;
+
 
 }
+
+
+
+/* =====================================
+        POPUP PAPER
+===================================== */
+
 
 .popup-box{
 
-background:#4e3226;
-padding:40px;
-border-radius:25px;
-width:500px;
-max-width:90%;
-text-align:center;
+
+    position:relative;
+
+
+    width:520px;
+
+
+    max-width:90%;
+
+
+    padding:45px;
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #fff1d2,
+
+    #e8c99a
+
+    );
+
+
+    border:
+
+    1px solid rgba(120,70,25,.3);
+
+
+    box-shadow:
+
+
+    0 25px 70px rgba(0,0,0,.45),
+
+
+    inset 0 0 35px rgba(120,70,25,.15);
+
+
+    animation:
+
+    popupOpen .5s ease;
+
 
 }
+
+
+
+@keyframes popupOpen{
+
+
+from{
+
+
+    opacity:0;
+
+    transform:
+
+    scale(.8)
+    translateY(30px);
+
+}
+
+
+to{
+
+
+    opacity:1;
+
+    transform:
+
+    scale(1)
+    translateY(0);
+
+}
+
+
+}
+
+
+
 
 .popup-box h2{
 
-font-size:35px;
-margin-bottom:20px;
+
+    font-family:
+
+    'Cormorant Garamond',
+    serif;
+
+
+    font-size:45px;
+
+
+    color:#6b3d20;
+
+
+    margin-bottom:25px;
+
 
 }
+
+
 
 .popup-box p{
 
-line-height:2;
-font-size:18px;
+
+    font-size:18px;
+    color:#e8cfa3;
+
+    line-height:1.8;
+
 
 }
 
+
+
+/* =====================================
+        CLOSE BUTTON
+===================================== */
+
+
 .close{
 
-font-size:40px;
-float:right;
-cursor:pointer;
+
+    position:absolute;
+
+
+    right:20px;
+
+
+    top:15px;
+
+
+    font-size:40px;
+
+
+    cursor:pointer;
+
+
+    color:#6b3d20;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.close:hover{
+
+
+    transform:
+
+    rotate(90deg)
+    scale(1.1);
+
+
+    color:#a65b2a;
+
+
+}
+
+
+
+
+
+/* =====================================
+        RESPONSIVE
+===================================== */
+
+
+@media(max-width:900px){
+
+
+h1{
+
+
+    font-size:45px;
+
+
+}
+
+
+
+.gift{
+
+
+    padding:40px 20px;
+
+
+}
+
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+
+.container{
+
+
+    width:92%;
+
+
+}
+
+
+
+h1{
+
+
+    font-size:35px;
+
+
+}
+
+
+
+.subtitle{
+
+
+    font-size:15px;
+
+
+}
+
+
+
+.gift-grid{
+
+
+    gap:20px;
+
+
+}
+
+
+
+.gift{
+
+
+    font-size:55px;
+
+
+}
+
+
+
+.popup-box{
+
+
+    padding:30px 20px;
+
+
+}
+
+
+
+.popup-box h2{
+
+
+    font-size:35px;
+
+
+}
+
+
+
+.popup-box p{
+
+
+    font-size:15px;
+
+
+}
+
 
 }

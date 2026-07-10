@@ -17,74 +17,124 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 </head>
 
+
 <body>
+
 
 <div class="container">
 
+
 <a href="dashboard.html" class="back">
+
 <i class="fa-solid fa-arrow-left"></i>
-Back
+Back To Diary
+
 </a>
 
-<h1>🎁 Secret Surprise Box 🎁</h1>
+
+
+<h1>
+🎁 Secret Surprise Box 🎁
+</h1>
+
 
 <p class="subtitle">
+
 Every gift hides a little piece of my heart ❤️
+
 </p>
+
+
 
 <div class="gift-grid">
 
+
+
 <div class="gift" onclick="openGift(0)">
-🎁
+🌹
 <h2>Gift 1</h2>
 </div>
 
+
+
 <div class="gift" onclick="openGift(1)">
-🎁
+🤍
 <h2>Gift 2</h2>
 </div>
 
+
+
 <div class="gift" onclick="openGift(2)">
-🎁
+☕
 <h2>Gift 3</h2>
 </div>
 
+
+
 <div class="gift" onclick="openGift(3)">
-🎁
+💍
 <h2>Gift 4</h2>
 </div>
 
+
+
 <div class="gift" onclick="openGift(4)">
-🎁
+❤️
 <h2>Gift 5</h2>
 </div>
 
-<div class="gift lock" onclick="showLock()">
+
+
+<div class="gift final" onclick="showLock()">
+
 🔒
-<h2>Final Gift</h2>
-</div>
+
+<h2>
+Final Gift
+</h2>
 
 </div>
 
+
 </div>
 
-<!-- Popup -->
+
+</div>
+
+
+
+
+<!-- POPUP -->
+
 
 <div id="popup">
 
+
 <div class="popup-box">
 
-<span onclick="closePopup()" class="close">&times;</span>
+
+<span onclick="closePopup()" class="close">
+×
+</span>
+
 
 <h2 id="title"></h2>
 
+
 <p id="message"></p>
 
-</div>
+
 
 </div>
+
+
+</div>
+
+
+
 
 <script src="js/surprises.js"></script>
+
 
 </body>
 

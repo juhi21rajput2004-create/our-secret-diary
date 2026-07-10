@@ -1,173 +1,1047 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Cormorant+Garamond:wght@700&display=swap');
+/*========================================
+        IMPORT + RESET
+========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Cormorant+Garamond:wght@700&family=Cinzel:wght@600&display=swap');
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+/*========================================
+        BODY
+========================================*/
 
 body{
 
-font-family:Poppins,sans-serif;
-background:linear-gradient(135deg,#2b1d17,#5a3d2b,#7a5538);
-color:white;
-min-height:100vh;
+    font-family:'Poppins',sans-serif;
+    color:#fff;
+    min-height:100vh;
+    overflow-x:hidden;
+
+    background:
+    linear-gradient(rgba(35,20,12,.82),rgba(35,20,12,.82)),
+    url("https://images.unsplash.com/photo-1512820790803-83ca734da794");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 
 }
+
+
+/*========================================
+        CONTAINER
+========================================*/
 
 .container{
 
-width:90%;
-max-width:1250px;
-margin:auto;
-padding:50px 0;
+    width:92%;
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:45px 0 70px;
 
 }
+
+
+/*========================================
+        BACK BUTTON
+========================================*/
 
 .back{
 
-display:inline-block;
-padding:12px 25px;
-background:#8B5E3C;
-border-radius:30px;
-text-decoration:none;
-color:white;
-margin-bottom:30px;
-transition:.3s;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 28px;
+
+    text-decoration:none;
+
+    color:#ffeecb;
+
+    background:
+    linear-gradient(
+    145deg,
+    #7b4b29,
+    #4a2915);
+
+    border:1px solid rgba(230,190,120,.55);
+
+    border-radius:50px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.35);
+
+    transition:.35s;
 
 }
+
 
 .back:hover{
 
-background:#6b442f;
+    transform:translateY(-4px);
+
+    background:
+    linear-gradient(
+    145deg,
+    #926039,
+    #5b341c);
 
 }
+
+
+/*========================================
+        TITLE
+========================================*/
 
 h1{
 
-text-align:center;
-font-size:58px;
-font-family:'Cormorant Garamond',serif;
-margin-bottom:10px;
-color:#f6e2d3;
+    text-align:center;
+
+    margin-top:25px;
+
+    font-size:62px;
+
+    font-family:'Cinzel',serif;
+
+    color:#ffe5bb;
+
+    letter-spacing:2px;
+
+    text-shadow:
+    0 5px 15px rgba(0,0,0,.35);
 
 }
+
+
+/*========================================
+        SUBTITLE
+========================================*/
 
 .subtitle{
 
-text-align:center;
-margin-bottom:50px;
-color:#e4c6b2;
-font-size:18px;
+    text-align:center;
+
+    margin:18px auto 60px;
+
+    width:90%;
+    max-width:760px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#efd7bf;
 
 }
+
+
+/*========================================
+        GRID
+========================================*/
+
 
 .dream-grid{
 
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:45px;
+
+    justify-items:center;
 
 }
+
+
+/* BOOK */
+
+.dream-book{
+
+    width:220px;
+    height:290px;
+
+    perspective:2500px;
+
+}
+
+
+/* INNER */
+
+.book-inner{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    transform-style:preserve-3d;
+
+}
+
+
+/* =====================================
+      COVER
+===================================== */
+
+.book-cover{
+
+    position:absolute;
+    inset:0;
+
+    z-index:5;
+
+    transform-origin:left center;
+
+    transition:1.2s cubic-bezier(.2,.8,.2,1);
+
+    border-radius:10px 18px 18px 10px;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #3c2215,
+    #5d341d,
+    #7b4b29,
+    #5b341d,
+    #3a2113);
+
+    box-shadow:
+
+    0 25px 45px rgba(0,0,0,.45),
+
+    inset 0 0 40px rgba(255,255,255,.06);
+
+}
+
+
+/* GOLD BORDER */
+
+.book-cover::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:14px;
+
+    border:2px solid rgba(233,193,118,.45);
+
+    border-radius:12px;
+
+}
+
+
+/* LEATHER TEXTURE */
+
+.book-cover::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.10;
+
+    background:
+
+    repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,.08) 0,
+    rgba(255,255,255,.08) 2px,
+    transparent 2px,
+    transparent 8px);
+
+}
+
+
+/* =====================================
+      BOOK SPINE
+===================================== */
+
+.book-cover span{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:16px;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+    to right,
+    #2b150b,
+    #6f4425,
+    #2b150b);
+
+}
+
+
+/* =====================================
+      PAPER EDGES
+===================================== */
+
+.book-page{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:10px 18px 18px 10px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #faf4e6,
+    #f3e7cf);
+
+    box-shadow:
+
+    inset 0 0 45px rgba(145,102,50,.12);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:28px;
+
+}
+
+
+/* PAPER BORDER */
+
+.book-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:12px;
+
+    border:1px solid rgba(197,157,92,.35);
+
+}
+
+
+/* PAPER SIDE */
+
+.book-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-8px;
+
+    top:12px;
+
+    width:10px;
+
+    height:90%;
+
+    border-radius:5px;
+
+    background:
+
+    repeating-linear-gradient(
+
+    to bottom,
+
+    #f5ead6 0,
+
+    #f5ead6 4px,
+
+    #e9d7bb 4px,
+
+    #e9d7bb 8px
+
+    );
+
+}/* =====================================
+      COVER CONTENT
+===================================== */
+
+.book-cover{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+/* BOOK ICON */
+
+.book-cover i{
+
+    font-size:54px;
+
+    color:#ffd99a;
+
+    margin-bottom:18px;
+
+    text-shadow:
+    0 5px 12px rgba(0,0,0,.35);
+
+}
+
+
+/* BOOK TITLE */
+
+.book-cover h2{
+
+    font-family:'Cinzel',serif;
+
+    color:#ffe7bd;
+
+    font-size:32px;
+
+    line-height:1.4;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    padding:0 15px;
+
+}
+
+
+/* GOLD LINE */
+
+.book-cover h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:2px;
+
+    margin:16px auto 0;
+
+    background:linear-gradient(
+    to right,
+    transparent,
+    #f3d18d,
+    transparent);
+
+}
+
+
+/* GOLD HEART */
+
+.book-cover h2::before{
+
+    content:"❤";
+
+    display:block;
+
+    color:#f5c06b;
+
+    font-size:16px;
+
+    margin-bottom:15px;
+
+}
+
+
+/* =====================================
+      WAX SEAL
+===================================== */
+
+.book-cover .seal{
+
+    position:absolute;
+
+    bottom:18px;
+
+    right:18px;
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+    #b51420,
+    #770915);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:18px;
+
+    border:3px solid #f0cb88;
+
+    box-shadow:
+    0 8px 18px rgba(0,0,0,.35);
+
+}
+
+
+/* =====================================
+      PAGE CONTENT
+===================================== */
+
+.book-page h3{
+
+    font-family:'Cinzel',serif;
+
+    color:#6a3f1e;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+
+.book-page p{
+
+    color:#5c3820;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+
+/* =====================================
+      OPEN EFFECT
+===================================== */
+
+.dream-book.open .book-cover{
+
+    transform:
+
+    rotateY(-160deg);
+
+    box-shadow:
+
+    -15px 15px 35px rgba(0,0,0,.35);
+
+}
+
+
+/* =====================================
+      HOVER
+===================================== */
+
+.dream-book{
+
+    transition:.35s;
+
+}
+
+.dream-book:hover{
+
+    transform:
+
+    translateY(-10px);
+
+}
+
+
+.dream-book:hover .book-cover{
+
+    box-shadow:
+
+    0 30px 50px rgba(0,0,0,.45),
+
+    inset 0 0 50px rgba(255,255,255,.08);
+
+}
+
+
+/* =====================================
+      BOOK THICKNESS
+===================================== */
+
+.book-cover{
+
+    border-left:8px solid #2d160d;
+
+}
+
+
+.book-page{
+
+    border-left:8px solid #efe1c5;
+
+}
+
+
+/* =====================================
+      BOOK SHADOW
+===================================== */
+
+.dream-book::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:8%;
+
+    bottom:-18px;
+
+    width:84%;
+
+    height:18px;
+
+    background:rgba(0,0,0,.28);
+
+    filter:blur(12px);
+
+    border-radius:50%;
+
+    z-index:-1;
+
+}
+/*========================================
+        CARD HOVER
+========================================*/
 
 .dream-card{
 
-height:260px;
-perspective:1000px;
-cursor:pointer;
+    transition:transform .35s ease;
 
 }
 
-.inner{
+.dream-card:hover{
 
-position:relative;
-width:100%;
-height:100%;
-transition:transform .8s;
-transform-style:preserve-3d;
+    transform:translateY(-8px);
 
 }
 
-.dream-card.flip .inner{
+.dream-card:hover .front{
 
-transform:rotateY(180deg);
-
-}
-
-.front,
-.back-side{
-
-position:absolute;
-width:100%;
-height:100%;
-border-radius:25px;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-backface-visibility:hidden;
-
-padding:25px;
+    box-shadow:
+    inset 0 0 55px rgba(181,134,66,.18),
+    0 30px 50px rgba(0,0,0,.35);
 
 }
 
-.front{
+.dream-card:hover .front i{
 
-background:#5b3928;
-border:1px solid rgba(255,255,255,.12);
+    transform:scale(1.12) rotate(-6deg);
+
+    color:#9b5e2e;
 
 }
 
 .front i{
 
-font-size:55px;
-margin-bottom:20px;
-color:#f2d3b6;
+    transition:.35s;
 
 }
 
-.front h2{
 
-font-size:26px;
-
-}
-
-.back-side{
-
-background:#8B5E3C;
-transform:rotateY(180deg);
-text-align:center;
-
-}
-
-.back-side h3{
-
-font-size:28px;
-margin-bottom:15px;
-
-}
-
-.back-side p{
-
-line-height:1.8;
-
-}
-
-@media(max-width:768px){
+/*========================================
+        TITLE GLOW
+========================================*/
 
 h1{
 
-font-size:40px;
+    position:relative;
 
 }
 
-.subtitle{
+h1::after{
 
-font-size:16px;
+    content:"";
+
+    display:block;
+
+    width:220px;
+
+    height:3px;
+
+    margin:18px auto 0;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+    to right,
+    transparent,
+    #d6ab6a,
+    #fff1c6,
+    #d6ab6a,
+    transparent);
 
 }
 
+
+/*========================================
+        GRID ANIMATION
+========================================*/
+
+.dream-card{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.dream-card:nth-child(2){animation-delay:.08s;}
+.dream-card:nth-child(3){animation-delay:.16s;}
+.dream-card:nth-child(4){animation-delay:.24s;}
+.dream-card:nth-child(5){animation-delay:.32s;}
+.dream-card:nth-child(6){animation-delay:.40s;}
+.dream-card:nth-child(7){animation-delay:.48s;}
+.dream-card:nth-child(8){animation-delay:.56s;}
+.dream-card:nth-child(9){animation-delay:.64s;}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*========================================
+        TABLET
+========================================*/
+
+@media(max-width:992px){
+
+    h1{
+
+        font-size:48px;
+
+    }
+
+    .subtitle{
+
+        font-size:17px;
+
+        margin-bottom:45px;
+
+    }
+
+    .dream-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+}
+
+    .dream-card{
+
+        height:270px;
+
+    }
+
+    .front h2{
+
+        font-size:25px;
+
+    }
+
+    .back-side h3{
+
+        font-size:26px;
+
+    }
+
+    .back-side p{
+
+        font-size:16px;
+
+    }
+    .dream-book{
+
+    width:220px;
+    height:280px;
+
+}
+
+.book-cover h2{
+
+    font-size:22px;
+
+}
+
+.book-cover i{
+
+    font-size:48px;
+
+}
+
+.book-page h3{
+
+    font-size:22px;
+
+}
+
+.book-page p{
+
+    font-size:14px;
+
+}
+
+}
+
+
+/*========================================
+        MOBILE
+========================================*/
+
+@media(max-width:768px){
+
+    .container{
+
+        width:94%;
+
+        padding:25px 0 45px;
+
+    }
+
+    h1{
+
+        font-size:34px;
+
+    }
+
+    .subtitle{
+
+        font-size:15px;
+
+        margin-bottom:30px;
+
+    }
+
+    .dream-grid{
+
+    grid-template-columns:1fr;
+
+    gap:22px;
+
+}
+    .dream-card{
+
+        height:240px;
+
+    }
+
+    .front{
+
+        padding:22px;
+
+    }
+
+    .front i{
+
+        font-size:48px;
+
+        margin-bottom:16px;
+
+    }
+
+    .front h2{
+
+        font-size:22px;
+
+    }
+
+    .back-side{
+
+        padding:22px;
+
+    }
+
+    .back-side h3{
+
+        font-size:22px;
+
+    }
+
+    .back-side p{
+
+        font-size:15px;
+
+        line-height:1.7;
+
+    }
+
+    .back{
+
+        padding:10px 20px;
+
+        font-size:14px;
+
+    }
+    .dream-book{
+
+    width:180px;
+    height:240px;
+
+}
+
+.book-cover h2{
+
+    font-size:18px;
+
+}
+
+.book-cover i{
+
+    font-size:38px;
+
+}
+
+.book-page{
+
+    padding:18px;
+
+}
+
+.book-page h3{
+
+    font-size:18px;
+
+}
+
+.book-page p{
+
+    font-size:13px;
+    line-height:1.6;
+
+}
+
+.seal{
+
+    width:36px;
+    height:36px;
+    font-size:16px;
+
+}
+
+}
+
+
+/*========================================
+        SMALL MOBILE
+========================================*/
+
+@media(max-width:480px){
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+    .subtitle{
+
+        font-size:14px;
+
+    }
+
+    .dream-card{
+
+        height:220px;
+
+    }
+
+    .front h2{
+
+        font-size:20px;
+
+    }
+
+    .back-side h3{
+
+        font-size:20px;
+
+    }
+
+    .back-side p{
+
+        font-size:14px;
+
+    }
+.dream-book{
+
+    width:160px;
+    height:210px;
+
+}
+
+.book-cover h2{
+
+    font-size:16px;
+
+}
+
+.book-cover i{
+
+    font-size:32px;
+
+}
+
+.book-page h3{
+
+    font-size:16px;
+
+}
+
+.book-page p{
+
+    font-size:12px;
+
+}
 }
 

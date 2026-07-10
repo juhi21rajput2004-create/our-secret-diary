@@ -188,51 +188,159 @@ opacity:.5;
 COVER
 =================== */
 
+/*========================================
+        LEATHER BOOK COVER
+========================================*/
 
 .cover{
 
+    position:relative;
+    overflow:hidden;
 
-background:
+    background:
+    linear-gradient(145deg,
+    #2b160d 0%,
+    #472515 18%,
+    #6a3b21 40%,
+    #8b572a 52%,
+    #6a3b21 64%,
+    #472515 82%,
+    #2b160d 100%);
 
-linear-gradient(
-145deg,
-#24130b,
-#4a2412,
-#6b3518,
-#301509
-);
+    color:#f7e3c0;
+
+    border-radius:4px;
+
+    box-shadow:
+    inset 0 0 0 2px rgba(255,222,170,.08),
+    inset 0 0 80px rgba(0,0,0,.28),
+    0 18px 45px rgba(0,0,0,.55);
+
+}
 
 
-color:#f5d8a5;
+/* Leather Texture */
 
+.cover::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,.03) 0px,
+    rgba(255,255,255,.03) 2px,
+    transparent 2px,
+    transparent 8px);
+
+    opacity:.45;
 
 }
 
 
+/* Golden Border */
 
-.cover:after{
+.cover::after{
 
+    content:"";
 
-content:"";
+    position:absolute;
 
-position:absolute;
+    top:18px;
+    left:18px;
+    right:18px;
+    bottom:18px;
 
-inset:0;
+    border:2px solid rgba(232,196,120,.75);
 
+    border-radius:6px;
 
-background:
-
-repeating-linear-gradient(
-45deg,
-rgba(255,255,255,.03),
-rgba(255,255,255,.03) 2px,
-transparent 2px,
-transparent 6px
-);
-
+    box-shadow:
+    inset 0 0 12px rgba(255,220,160,.25),
+    0 0 8px rgba(0,0,0,.2);
 
 }
 
+/*========================================
+        BOOK SPINE
+========================================*/
+
+.cover .cover-inner{
+
+    position:relative;
+    z-index:5;
+
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+/* Left Leather Spine */
+
+.cover .cover-inner::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-8px;
+    top:0;
+
+    width:40px;
+    height:100%;
+
+    border-radius:6px 0 0 6px;
+
+    background:
+    linear-gradient(
+    to right,
+    #160c07 0%,
+    #2b160d 20%,
+    #5d331d 45%,
+    #2b160d 70%,
+    #140904 100%);
+
+    box-shadow:
+    inset -4px 0 8px rgba(255,220,170,.12),
+    inset 4px 0 12px rgba(0,0,0,.5);
+
+}
+
+
+/* Stitch Lines */
+
+.cover .cover-inner::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:14px;
+    top:20px;
+
+    width:2px;
+    height:calc(100% - 40px);
+
+    background:
+    repeating-linear-gradient(
+    to bottom,
+    rgba(255,225,170,.75) 0px,
+    rgba(255,225,170,.75) 8px,
+    transparent 8px,
+    transparent 16px);
+
+}
 
 
 
@@ -265,132 +373,248 @@ padding:30px;
 }
 
 
+/*========================================
+        GOLDEN TITLE
+========================================*/
 
 .cover h1{
 
+    font-family:'Cinzel',serif;
+    font-size:46px;
+    letter-spacing:3px;
+    color:#f7ddb0;
 
-font-family:'Cinzel',serif;
+    text-shadow:
+    0 1px 0 #fff4cf,
+    0 2px 0 #d5a965,
+    0 3px 0 #b57b36,
+    0 8px 18px rgba(0,0,0,.45);
 
-
-font-size:42px;
-
-
-letter-spacing:3px;
-
-
-color:#ffe4b5;
-
+    margin-top:10px;
 
 }
-
-
 
 .cover h2{
 
+    margin-top:12px;
 
-font-family:'Cormorant Garamond',serif;
+    font-family:'Cormorant Garamond',serif;
 
+    font-size:34px;
 
-font-size:38px;
+    color:#f4c98b;
 
-
-margin-top:10px;
-
-
-color:#f4c98b;
-
+    letter-spacing:2px;
 
 }
-
-
 
 .cover p{
 
+    margin-top:24px;
 
-margin-top:20px;
+    font-size:18px;
 
+    line-height:1.8;
 
-font-size:18px;
-
-
-line-height:1.8;
-
-
-color:#ffe8c9;
-
+    color:#f7ead7;
 
 }
-
 
 .cover span{
 
+    color:#dcb57b;
 
-font-size:14px;
+    letter-spacing:2px;
 
-color:#d9a76a;
+    font-size:14px;
 
 }
 
-
+/* Golden Divider */
 
 .line{
 
+    width:170px;
+    height:2px;
 
-width:150px;
+    margin:24px 0;
 
-height:2px;
-
-
-background:#c48a45;
-
-
-margin:20px;
+    background:linear-gradient(
+    to right,
+    transparent,
+    #d4a55d,
+    #ffe7b7,
+    #d4a55d,
+    transparent);
 
 }
 
 
-
-
-
-/* WAX SEAL */
-
+/*========================================
+        WAX SEAL
+========================================*/
 
 .seal{
 
+    width:72px;
+    height:72px;
 
-height:65px;
+    border-radius:50%;
 
-width:65px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
+    font-size:30px;
 
-background:#7b1018;
+    margin-bottom:20px;
 
+    color:#fff;
 
-border-radius:50%;
+    background:
+    radial-gradient(circle at 30% 30%,
+    #b91c2d,
+    #7b1018 65%,
+    #4d0910);
 
+    border:2px solid rgba(255,210,180,.25);
 
-display:flex;
+    box-shadow:
+    inset 0 2px 10px rgba(255,255,255,.25),
+    inset 0 -8px 15px rgba(0,0,0,.35),
+    0 10px 25px rgba(0,0,0,.45);
 
-align-items:center;
+}
+/*========================================
+      BOOK PAGE EDGES
+========================================*/
 
-justify-content:center;
+.cover .cover-inner{
 
-
-font-size:30px;
-
-
-box-shadow:
-
-0 5px 15px black,
-
-inset 0 0 15px white;
-
-
-margin-bottom:15px;
-
+    overflow:hidden;
 
 }
 
+.cover .cover-inner::before{
+
+    box-shadow:
+    inset -3px 0 10px rgba(255,235,200,.15),
+    inset 3px 0 10px rgba(0,0,0,.45);
+
+}
+
+
+/*========================================
+      GOLDEN CORNERS
+========================================*/
+
+.cover::after{
+
+    background:
+    linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)) padding-box,
+
+    linear-gradient(135deg,
+    #8c5d2d,
+    #f7d89b,
+    #b67a38,
+    #f7d89b,
+    #8c5d2d) border-box;
+
+    border:2px solid transparent;
+
+}
+
+
+/*========================================
+      PAGE EDGE EFFECT
+========================================*/
+
+.cover::before{
+
+    background:
+
+    repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,.03) 0px,
+    rgba(255,255,255,.03) 2px,
+    transparent 2px,
+    transparent 8px),
+
+    linear-gradient(
+    to right,
+
+    transparent 0%,
+
+    transparent 90%,
+
+    rgba(255,245,215,.65) 94%,
+
+    rgba(255,255,255,.9) 96%,
+
+    rgba(210,180,140,.8) 100%);
+
+}
+
+
+/*========================================
+      COVER HOVER
+========================================*/
+
+.cover{
+
+    transition:
+    transform .4s,
+    box-shadow .4s;
+
+}
+
+.cover:hover{
+
+    box-shadow:
+
+    inset 0 0 0 2px rgba(255,225,170,.12),
+
+    inset 0 0 90px rgba(0,0,0,.25),
+
+    0 30px 60px rgba(0,0,0,.55);
+
+}
+
+
+/*========================================
+      RESPONSIVE
+========================================*/
+
+@media(max-width:700px){
+
+    .cover h1{
+
+        font-size:32px;
+
+    }
+
+    .cover h2{
+
+        font-size:24px;
+
+    }
+
+    .cover p{
+
+        font-size:15px;
+
+    }
+
+    .seal{
+
+        width:56px;
+        height:56px;
+
+        font-size:24px;
+
+    }
+
+}
 
 
 
@@ -796,22 +1020,9 @@ opacity:0;
  COVER OPEN
 ========================== */
 
-
-.cover{
-
-transform-origin:left;
-
-transition:2s;
-
-}
-
-
-
 .cover.open{
 
-transform:
-
-rotateY(-160deg);
+    transform:none !important;
 
 }
 

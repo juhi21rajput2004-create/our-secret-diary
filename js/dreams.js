@@ -1,11 +1,16 @@
-const cards=document.querySelectorAll(".dream-card");
+const books = document.querySelectorAll(".dream-book");
 
-cards.forEach(card=>{
+const pageSound = document.getElementById("pageSound");
 
-card.addEventListener("click",()=>{
+books.forEach(book=>{
 
-card.classList.toggle("flip");
+    book.addEventListener("click",()=>{
 
-});
+        book.classList.toggle("open");
+
+        pageSound.currentTime = 0;
+        pageSound.play();
+
+    });
 
 });
