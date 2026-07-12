@@ -390,7 +390,26 @@ document.getElementById("musicBtn");
 
 
 let playing=false;
+// Auto Play on Page Load
+window.addEventListener("load", () => {
 
+    music.volume = 0.35; // Soft Volume
+
+    music.play()
+        .then(() => {
+
+            playing = true;
+
+            musicBtn.innerHTML = "⏸ Pause Music ❤️";
+
+        })
+        .catch(() => {
+
+            // Browser blocked autoplay
+
+        });
+
+});
 
 
 musicBtn.onclick=function(){

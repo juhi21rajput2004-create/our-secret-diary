@@ -1087,9 +1087,9 @@ body{
 
 #book{
 
-    width:78vw;
+     width:82vw;
 
-    max-width:300px;
+    max-width:320px;
 
     aspect-ratio:310/430;
 
@@ -1100,12 +1100,13 @@ body{
 }
 
 
+.cover-inner{
 
-    .cover-inner{
+    padding:10px 15px;
 
-        padding:15px;
+    justify-content:flex-start;
 
-    }
+}
 
 
 
@@ -1134,16 +1135,28 @@ body{
 
     }
 
+    .cover span{
+
+    font-size:11px;
+
+    letter-spacing:1px;
+
+    margin-top:12px;
+
+}
 
 
     .seal{
 
-        width:50px;
-        height:50px;
+    width:42px;
+    height:42px;
 
-        font-size:22px;
+    font-size:18px;
 
-    }
+    margin-top:10px;
+    margin-bottom:12px;
+
+}
 
 
 
