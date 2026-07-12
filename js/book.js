@@ -277,45 +277,36 @@ pagesContainer.appendChild(page);
 // INITIALIZE BOOK
 // ================================
 
-
+const isMobile = window.innerWidth <= 700;
 
 const book = new St.PageFlip(
+    document.getElementById("book"),
+    {
 
-document.getElementById("book"),
+        width:310,
+        height:430,
 
+        size: isMobile ? "stretch" : "fixed",
 
-{
+        minWidth:150,
+        maxWidth:310,
 
+        minHeight:210,
+        maxHeight:430,
 
-width:310,
+        showCover:true,
 
-height:430,
+        mobileScrollSupport:false,
 
+        maxShadowOpacity:0.5,
 
-size:"fixed",
+        flippingTime:1200,
 
+        drawShadow:true,
 
-showCover:true,
+        usePortrait:false
 
-
-mobileScrollSupport:false,
-
-
-maxShadowOpacity:0.5,
-
-
-flippingTime:1200,
-
-
-drawShadow:true,
-
-
-usePortrait:false
-
-
-}
-
-
+    }
 );
 
 
