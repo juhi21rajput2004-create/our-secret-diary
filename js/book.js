@@ -283,9 +283,9 @@ const book = new St.PageFlip(
     document.getElementById("book"),
     {
 
-        width:310,
-        height:430,
-
+       
+width: isMobile ? 320 : 310,
+height: isMobile ? 450 : 430,
         size: isMobile ? "stretch" : "fixed",
 
         minWidth:150,
