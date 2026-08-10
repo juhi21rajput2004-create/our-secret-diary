@@ -108,45 +108,21 @@ const memories = [
 "❤️ You are my forever.",
 "❤️ You are my soulmate.",
 "❤️ You are my future.",
-`💛 Secret Reward ❤️
+`💛Secret Reward ❤️
 
-Congratulations Bacha... 🥹
+Congratulations Bacha... 🥹❤️
 
-Tumne meri saari memories unlock kar li...
+Tumne meri saari memories unlock kar li hain,
+aur ye dekhkar mujhe bahut khushi ho rahi hai. 🫶🏻
 
-Aur isse dekhkar mujhe itni khushi ho rahi hai ki words me describe hi nahi kar sakti. ❤️
-
-Ab meri ek chhoti si wish suno...
-
-Main tumhare paas aana chahti hoon...
-
-Tumhara haath pakadna chahti hoon...
-
-Tumhe bahut tight hug karna chahti hoon... 🤍
-
-Phir tumhari aankhon me dekh kar smile karna chahti hoon...
-
-Aur...
-
-Main tumko kiss karna chahti hoon... 😘💋
-
-Forehead Kiss ❤️
-
-Nose Kiss 🤭
-
-Cheek Kiss 😘
-
-Aur ek pyara sa long kiss sirf mere Bacha ke liye... 💋
-
-Promise na...
-
-Bahut jaldi milenge.
-
+Ab bas dil mein ek chhoti si wish hai...
+Tumse milna, tumhare saath thoda time spend karna,
+baatein karna aur bas tumhare paas rehna. 🤍
+I really hope woh din jaldi aaye. ❤️
 Miss You So Much...
-
 I Love You Infinity ♾️❤️
-
-Forever Your Wifeyy ❤️`
+Forever Your Wifeyy ❤️
+`
 ];
 // ============================
 // Gallery
